@@ -1,16 +1,8 @@
-import { useEffect, useState } from 'react';
 import { Box } from '../../common/box/box';
-import { ConfettiFx } from '../../fx/confetti-fx/confetti-fx';
 import { Task02 as Task } from '../../tasks/02/task-02';
 import styles from './lesson-02.module.scss';
 
 export const Lesson02 = () => {
-    const [lessonSolved, setLessonSolved] = useState(false);
-
-    useEffect(() => {
-        setLessonSolved(isSolved());
-    }, []);
-
     return (
         <div className={styles.root}>
             <Task />
@@ -31,18 +23,7 @@ export const Lesson02 = () => {
                     <Box text={'7'} className={styles.box07} color={'orangeRed'} />
                     <Box text={'8'} className={styles.box08} color={'hotRed'} />
                 </div>
-                <ConfettiFx
-                    maxParticles={400}
-                    dissolve={315}
-                    show={lessonSolved}
-                    style={{ display: lessonSolved ? 'block' : 'none' }}
-                />
             </div>
         </div>
     );
 };
-
-function isSolved(): boolean {
-    const onStageRowsOrder = document.getElementById('playground')?.innerText.replace(/\n/gm, '');
-    return onStageRowsOrder === '12345678';
-}
