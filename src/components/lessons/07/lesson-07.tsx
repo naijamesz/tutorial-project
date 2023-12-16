@@ -73,20 +73,20 @@ export const Lesson07 = () => {
         <div className={styles.root}>
             <Task />
             <div className={styles.playground}>
-                <Box outlined color="pastelPink" icon="heartOutline" className={styles.icon} />
+                <Box outlined color="pastelPink" icon="heart" className={styles.icon} />
                 <Box
-                    outlined
+                    outlined={true}
                     color={getColor(0)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="right"
+                    iconDirection="left"
                 />
                 <Box
                     outlined
                     color={getColor(1)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="right"
+                    iconDirection="up"
                 />
                 <Box
                     outlined
@@ -100,28 +100,28 @@ export const Lesson07 = () => {
                     color={getColor(3)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="down"
+                    iconDirection="up"
                 />
                 <Box
                     outlined
                     color={getColor(4)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="right"
+                    iconDirection="up"
                 />
                 <Box
                     outlined
                     color={getColor(5)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="left"
+                    iconDirection="up"
                 />
                 <Box
                     outlined
                     color={getColor(6)}
                     icon="arrow"
                     className={styles.icon}
-                    iconDirection="right"
+                    iconDirection="up"
                 />
                 <Box outlined color="pastelPink" icon="heart" className={styles.icon} />
                 <ConfettiFx

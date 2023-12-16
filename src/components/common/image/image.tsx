@@ -19,6 +19,7 @@ export const Image = ({
             <img
                 src={src}
                 className={`${styles.img} ${styles[alignment]} ${styles[fitting]}`}
+                height={''}
             />
         </div>
     );
